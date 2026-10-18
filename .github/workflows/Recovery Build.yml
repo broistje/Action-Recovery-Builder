@@ -71,7 +71,6 @@ jobs:
         large-packages: true
         docker-images: true
         swap-storage: true
-        
       # That's it! Now use your normal steps
 
     - name: Set Swap Space
