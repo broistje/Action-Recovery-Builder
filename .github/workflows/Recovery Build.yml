@@ -73,7 +73,7 @@ jobs:
       uses: actions/checkout@v4
             
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
-        - name: Free Disk Space (Fast)
+    - name: Free Disk Space (Fast)
       uses: jlumbroso/free-disk-space@main
       with:
         tool-cache: true
