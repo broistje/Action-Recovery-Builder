@@ -24,7 +24,7 @@ on:
         required: true
         default: device/xiaomi/lavender
       DEVICE_NAME:
-        description: Device Name from tree (should match name on twrp_<DEVICE_NAME>.mk)
+        description: Device Name from tree (should match name on omni_<DEVICE_NAME>.mk)
         required: true
         default: lavender
       BUILD_TARGET:
@@ -133,7 +133,7 @@ jobs:
         else
           echo "No additional commands specified."
         fi
-        lunch twrp_${{ inputs.DEVICE_NAME }}-eng && mka $(tr -d _ <<< ${{ inputs.BUILD_TARGET }})image
+        lunch omni_${{ inputs.DEVICE_NAME }}-eng && mka $(tr -d _ <<< ${{ inputs.BUILD_TARGET }})image
       working-directory: fox_${{ inputs.MANIFEST_BRANCH }}
 
     - name: Upload to Release
